@@ -32,9 +32,8 @@ body {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
     -ms-interpolation-mode: nearest-neighbor;
+    width: 100%;
 }
-
-
 
 /* Add overlay to ensure text readability */
 body::before {
@@ -169,12 +168,16 @@ code, pre {
 
 /* Sections */
 .section {
-    padding: 80px 0 60px; /* Reduced padding between sections */
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
     position: relative;
     z-index: 1;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 0;
+    overflow-x: hidden;
 }
 
 .section-title {
@@ -205,29 +208,24 @@ code, pre {
 }
 
 .hero-content {
-    display: grid;
-    grid-template-columns: 480px 1fr;
-    gap: 3rem;
-    align-items: stretch;
-    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
+    flex-wrap: nowrap;
 }
 
 .minecraft-skin {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(16, 16, 26, 0.3);
-    border-radius: 10px;
-    padding: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    flex: 0 0 auto;
     width: 480px;
-    position: relative;
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem;
 }
 
 #skin-canvas {
@@ -308,17 +306,11 @@ code, pre {
 }
 
 .personal-info {
-    background: rgba(16, 16, 26, 0.3);
-    border-radius: 15px;
+    flex: 1;
+    min-width: 0;
+    max-width: 600px;
+    margin: 0;
     padding: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .personal-info .avatar {
@@ -435,24 +427,17 @@ code, pre {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-    margin-top: 3rem;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 1rem;
 }
 
 .project-card {
-    background: rgba(16, 16, 26, 0.3);
-    border-radius: 15px;
-    overflow: hidden;
-    transition: all 0.5s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .project-card::after {
@@ -630,8 +615,11 @@ code, pre {
 .about-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-    margin-top: 3rem;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .about-content h3, .achievements h3, .skills h3 {
@@ -686,8 +674,11 @@ code, pre {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .skill-item {
@@ -765,9 +756,11 @@ code, pre {
 .contact-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    max-width: 800px;
+    gap: 2rem;
     width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .contact-card {
@@ -927,351 +920,364 @@ code, pre {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
+    .hero-content {
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background: rgba(16, 16, 26, 0.3);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 1rem 0;
-        display: none;
-        align-items: center;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        gap: 1.5rem;
     }
 
-    .nav-links.active {
-        display: flex;
+    .minecraft-skin {
+        width: 100%;
+        max-width: 300px;
     }
 
-    .nav-links li {
-        margin: 0.5rem 0;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-        background: none;
-        border: none;
-        cursor: pointer;
-        z-index: 1001;
-        padding: 0.5rem;
-    }
-
-    .mobile-menu-btn span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: var(--light);
-        margin: 5px auto;
-        transition: all 0.3s;
-    }
-
-    .hero h1 {
-        font-size: 2.8rem;
-    }
-
-    .badges {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .badge {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.95rem;
-    }
-
-    .cta-button {
-         padding: 1.2rem 2.5rem;
-         font-size: 1rem;
-    }
-
-    .section-title {
-        font-size: 2.5rem;
-        margin-bottom: 3.5rem;
+    .personal-info {
+        width: 100%;
+        max-width: 500px;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
-        padding: 0 1rem;
     }
-
-     .project-card img {
-         height: 200px;
-     }
 
     .about-content {
         grid-template-columns: 1fr;
-        padding: 0 1rem;
     }
-
-    .about-content h3 {
-         font-size: 1.8rem;
-    }
-
-     .about-content ul li,
-     .achievements ul li {
-         padding: 1.2rem 1.5rem;
-         line-height: 1.7;
-     }
-
-    .list-icon {
-         width: 22px;
-         height: 22px;
-         margin-right: 1rem;
-     }
 
     .skills-grid {
-         gap: 1rem;
-         margin-top: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
     }
-
-     .skill-item {
-        padding: 1.5rem;
-     }
-
-     .skill-item h4 {
-         font-size: 1.1rem;
-     }
-
-     .skill-item p {
-         font-size: 0.9rem;
-     }
 
     .contact-info {
         grid-template-columns: 1fr;
-        padding: 0 1rem;
     }
 
-    .contact-card {
-        padding: 2.5rem;
+    .section {
+        padding: 2vh 0;
+        min-height: auto;
+        position: relative;
+        width: 100vw;
     }
 
-     .contact-icon {
-         width: 70px;
-         height: 70px;
-         margin-bottom: 1.5rem;
-     }
-
-      .contact-icon .bi-discord {
-         width: 80px;
-         height: 80px;
-     }
-
-     .contact-card h3 {
-         font-size: 1.6rem;
-     }
-
-     .social-btn {
-         padding: 0.8rem 2rem;
-         font-size: 1rem;
-     }
-
-    .nav-links a {
-        padding: 1rem;
-        justify-content: center;
-    }
-
-    .nav-links a i {
-        font-size: 1.4rem;
-    }
-
-    .project-links a {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-        gap: 0.3rem;
-    }
-
-    .project-links {
-        gap: 1rem;
-        justify-content: center;
-    }
-
-    .project-info {
-        padding: 1rem;
-    }
-
-    .project-info h3 {
-        font-size: 1.3rem;
-    }
-
-    .project-info p {
-        font-size: 0.95rem;
-    }
-
-    .navbar .badges {
-        display: none;
-    }
-
-    .nav-logo {
-        width: 30px;
-        height: 30px;
+    .hero {
+        padding: 1vh 0;
+        margin-top: 8vh;
+        min-height: auto;
+        position: relative;
     }
 
     .hero-content {
         grid-template-columns: 1fr;
+        gap: 2vh;
+        padding: 0 2vw;
+        max-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
     }
 
     .minecraft-skin {
-         height: auto; /* Allow height to adjust */
+        width: 90vw;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 1vh;
+        position: relative;
+        transform: translateZ(0);
     }
 
     #skin-canvas {
-        width: 300px;
-        height: 450px;
-        margin: 2rem 0;
+        width: 100%;
+        height: 45vh;
+        max-height: 300px;
+        margin: 4vh 0;
+        position: relative;
+    }
+
+    .skin-text-top {
+        position: absolute;
+        font-size: 1rem;
+        padding: 0.3rem 0.6rem;
+        top: 1vh;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        white-space: nowrap;
+    }
+
+    .skin-text-bottom {
+        position: absolute;
+        font-size: 0.7rem;
+        bottom: 1vh;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        white-space: nowrap;
     }
 
     .personal-info {
-        padding: 1.5rem;
+        width: 90vw;
+        max-width: 500px;
+        padding: 2vh;
+        margin: 0 auto;
+        position: relative;
+        transform: translateZ(0);
+    }
+
+    .personal-info .avatar {
+        width: 15vw;
+        max-width: 100px;
+        height: 15vw;
+        max-height: 100px;
+        margin: 0 auto 2vh;
+        position: relative;
+    }
+
+    .info-header {
+        margin-bottom: 2vh;
+        padding-bottom: 1vh;
+        position: relative;
+    }
+
+    .info-header h3 {
+        font-size: 1.1rem;
     }
 
     .info-content {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 1vh;
+        position: relative;
     }
 
     .info-item {
-        padding: 0.6rem;
-    }
-
-     .info-item span {
-         min-width: 70px;
-         margin-right: 0.5rem;
-     }
-
-     .personal-info-socials {
-         gap: 1rem;
-         margin-top: 1.5rem;
-         padding-top: 1rem;
-     }
-
-     .personal-info-socials a {
-         font-size: 1.5rem;
-     }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .minecraft-skin {
-        padding: 0.8rem;
-    }
-
-    #skin-canvas {
-        width: 250px;
-        height: 400px;
-        margin: 1.5rem 0;
-    }
-
-    .skin-text-top {
-        font-size: 1.2rem;
-        padding: 0.4rem 0.8rem;
-    }
-
-    .skin-text-top i {
-        font-size: 1.4rem;
-    }
-
-    .skin-text-bottom {
-        font-size: 0.8rem;
-    }
-
-    .personal-info {
-        padding: 1.2rem;
-    }
-
-    .personal-info .avatar {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 1.5rem;
-    }
-
-    .info-header h3 {
-        font-size: 1.3rem;
-    }
-
-    .info-header i {
-        font-size: 1.6rem;
-    }
-
-    .info-item {
-        padding: 0.5rem;
+        padding: 1vh;
+        margin-bottom: 0.5vh;
+        position: relative;
+        display: flex;
+        align-items: center;
     }
 
     .info-item i {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        width: 16px;
+        margin-right: 0.5rem;
     }
 
     .info-item span {
-        font-size: 0.8rem;
-        min-width: 60px;
+        font-size: 0.75rem;
+        min-width: 45px;
     }
 
     .info-item p, .info-item a {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .personal-info-socials {
-        gap: 0.8rem;
+        gap: 1vh;
+        margin-top: 2vh;
+        padding-top: 1vh;
     }
 
     .personal-info-socials a {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 3vh;
+        padding: 0 2vw;
+    }
+
+    .section-description {
+        font-size: 0.85rem;
+        margin-bottom: 2vh;
+        padding: 0 2vw;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 3vh;
+        padding: 0 2vw;
+        position: relative;
     }
 
     .project-card {
-        margin: 0 0.5rem;
+        width: 90vw;
+        max-width: 500px;
+        margin: 0 auto;
+        position: relative;
+        transform: translateZ(0);
     }
 
     .project-card img {
-        height: 180px;
+        height: 25vh;
+        max-height: 200px;
+    }
+
+    .project-info {
+        padding: 2vh;
     }
 
     .project-info h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        margin-bottom: 1vh;
     }
 
     .project-info p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        margin-bottom: 1vh;
+    }
+
+    .project-tags {
+        gap: 0.5vh;
+        margin: 1vh 0;
     }
 
     .project-tag {
         font-size: 0.7rem;
-        padding: 3px 6px;
+        padding: 0.3vh 0.6vh;
+    }
+
+    .project-links {
+        gap: 1vh;
+        margin-top: 1vh;
     }
 
     .project-links a {
-        padding: 0.5rem 1rem;
-        font-size: 0.85rem;
+        padding: 0.8vh 1.5vh;
+        font-size: 0.8rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 3vh;
+        padding: 0 2vw;
+        position: relative;
+    }
+
+    .about-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 2vh;
+    }
+
+    .about-content ul li {
+        padding: 1.5vh;
+        margin-bottom: 1vh;
+    }
+
+    .list-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 0.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5vh;
+        padding: 0 2vw;
+        position: relative;
+    }
+
+    .skill-item {
+        padding: 2vh;
+        position: relative;
+    }
+
+    .skill-item i {
+        font-size: 1.5rem;
+    }
+
+    .skill-item h4 {
+        font-size: 0.9rem;
+        margin-bottom: 0.5vh;
+    }
+
+    .skill-item p {
+        font-size: 0.75rem;
+        padding: 1vh;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 3vh;
+        padding: 0 2vw;
+        position: relative;
     }
 
     .contact-card {
-        padding: 2rem;
+        width: 90vw;
+        max-width: 400px;
+        padding: 3vh;
+        margin: 0 auto;
+        position: relative;
+        transform: translateZ(0);
     }
 
     .contact-icon {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 1.2rem;
+        width: 8vw;
+        max-width: 50px;
+        height: 8vw;
+        max-height: 50px;
+        margin-bottom: 2vh;
     }
 
     .contact-card h3 {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
+        margin-bottom: 2vh;
     }
 
     .social-btn {
-        padding: 0.7rem 1.8rem;
-        font-size: 0.9rem;
+        padding: 1vh 2vh;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 1.5vh 0;
+    }
+
+    .hero {
+        padding: 1vh 0;
+        margin-top: 6vh;
+    }
+
+    .minecraft-skin {
+        width: 85vw;
+    }
+
+    #skin-canvas {
+        height: 40vh;
+    }
+
+    .personal-info {
+        width: 85vw;
+    }
+
+    .personal-info .avatar {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+        margin-bottom: 2vh;
+    }
+
+    .project-card {
+        width: 85vw;
+    }
+
+    .project-card img {
+        height: 20vh;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        width: 85vw;
+        padding: 2vh;
     }
 }
 
@@ -1308,4 +1314,216 @@ code, pre {
 .badge {
     background: rgba(16, 16, 26, 0.3);
     color: var(--primary);
+}
+
+/* Add this to ensure proper positioning */
+.hero-content > *,
+.personal-info > *,
+.project-card > *,
+.about-content > *,
+.skill-item > *,
+.contact-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure proper stacking context */
+.section {
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+/* Fix for absolute positioned elements */
+.minecraft-skin,
+.personal-info,
+.project-card,
+.about-content,
+.skill-item,
+.contact-card {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Add zoom level handling */
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Container for all content */
+.content-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    transform-origin: top center;
+}
+
+/* Scale based on viewport width */
+@media screen and (min-width: 100vw) {
+    .content-wrapper {
+        transform: scale(calc(100vw / 100vw));
+    }
+}
+
+@media screen and (min-width: 150vw) {
+    .content-wrapper {
+        transform: scale(calc(100vw / 150vw));
+    }
+}
+
+@media screen and (min-width: 200vw) {
+    .content-wrapper {
+        transform: scale(calc(100vw / 200vw));
+    }
+}
+
+/* Fix layout for all sections */
+.section {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 0;
+    overflow-x: hidden;
+}
+
+/* Fix hero section layout */
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+}
+
+.minecraft-skin {
+    flex: 0 0 auto;
+    width: 480px;
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem;
+}
+
+.personal-info {
+    flex: 1;
+    min-width: 0;
+    max-width: 600px;
+    margin: 0;
+    padding: 2rem;
+}
+
+/* Fix grid layouts */
+.projects-grid,
+.about-content,
+.skills-grid,
+.contact-info {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.about-content {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.contact-info {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Fix card layouts */
+.project-card,
+.contact-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Fix for mobile layout */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .minecraft-skin {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .personal-info {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .projects-grid,
+    .about-content,
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Ensure proper stacking */
+.hero-content > *,
+.personal-info > *,
+.project-card > *,
+.about-content > *,
+.skill-item > *,
+.contact-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Fix for absolute positioned elements */
+.minecraft-skin,
+.personal-info,
+.project-card,
+.about-content,
+.skill-item,
+.contact-card {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Add smooth scaling */
+.content-wrapper,
+.section,
+.hero-content,
+.minecraft-skin,
+.personal-info,
+.project-card,
+.about-content,
+.skill-item,
+.contact-card {
+    transition: transform 0.3s ease-out;
 }
