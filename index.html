@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SalyVn - Minecraft Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://unpkg.com/skinview3d@4.1.0/dist/skinview3d.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!-- Background Container -->
+    <div class="background-container">
+        <img src="assets/bd.jpg" alt="Background">
+    </div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="assets/logo.png" alt="Logo" class="nav-logo">
+            SalyVn
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home"><i class="bi bi-house-fill"></i> Home</a></li>
+            <li><a href="#projects"><i class="bi bi-code-square"></i> Projects</a></li>
+            <li><a href="#about"><i class="bi bi-person-fill"></i> About</a></li>
+            <li><a href="#contact"><i class="bi bi-envelope-fill"></i> Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <div class="minecraft-skin">
+                        <div class="skin-text-top">
+                            <i class="bi bi-person-fill"></i>
+                            <span>SalyVn</span>
+                        </div>
+                        <canvas id="skin-canvas"></canvas>
+                        <div class="skin-text-bottom-container">
+                            <div class="skin-text-bottom skin-join-date">01/05/2018</div>
+                            <div class="skin-text-bottom skin-motto">i will always honestly truly completely love you</div>
+                        </div>
+                    </div>
+                    <div class="personal-info">
+                        <img src="assets/avatar.png" alt="Developer Avatar" class="avatar">
+                        <div class="info-header">
+                            <i class="bi bi-person-circle"></i>
+                            <h3>Personal Information</h3>
+                        </div>
+                        <div class="info-content">
+                            <div class="info-row">
+                                <div class="info-item">
+                                    <i class="bi bi-person"></i>
+                                    <span>Name:</span>
+                                    <p>Trần Đ.Nhân</p>
+                                </div>
+                                <div class="info-item">
+                                    <i class="bi bi-person-badge"></i>
+                                    <span>Nickname:</span>
+                                    <p>Saly</p>
+                                </div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-item">
+                                    <i class="bi bi-calendar"></i>
+                                    <span>Age:</span>
+                                    <p>18</p>
+                                </div>
+                                <div class="info-item">
+                                    <i class="bi bi-gift"></i>
+                                    <span>Birthday:</span>
+                                    <p>01/05/2007</p>
+                                </div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-item">
+                                    <i class="bi bi-briefcase"></i>
+                                    <span>Jobs:</span>
+                                    <p>Freelancer</p>
+                                </div>
+                                <div class="info-item">
+                                    <i class="bi bi-award"></i>
+                                    <span>Role:</span>
+                                    <p>Founder Studio</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="personal-info-socials">
+                            <a href="https://www.facebook.com/saly.s1.it" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="https://discord.gg/234W8Jr3bz" target="_blank"><i class="bi bi-discord"></i></a>
+                            <a href="https://guns.lol/salyvn" target="_blank"><i class="bi bi-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-description">These are featured projects, besides there are many other small projects.</p>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be dynamically added here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-description">These are key highlights of my experience and skills.</p>
+            <div class="about-content">
+                <div class="experience">
+                    <h3>Experience</h3>
+                    <ul>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="list-icon"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            4 years of server experience in various roles: Media, staff, half-admin, admin, owner, founder
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="list-icon"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            2 years of managing and establishing a studio
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="list-icon"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Author of MMOItems - VSCode extension development
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="list-icon"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Project Leader of Noraxel - Training and developing a network for newcomers.
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="list-icon"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Former admin/staff of the bloxfruit clusters on Mineahihi and Heromc servers
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="list-icon"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Former Co-op admin of the SkyPvP clusters on Mineahihi and Heromc
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="list-icon"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Former Admin of Horizon
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="list-icon"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Former Admin of various large and small servers,...
+                        </li>
+                    </ul>
+                </div>
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="bi bi-code-square"></i>
+                            <h4>Frontend Development</h4>
+                            <p>Specialist in modern web development with React, TypeScript, and responsive design</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="bi bi-magic"></i>
+                            <h4>MythicMobs & GooP</h4>
+                            <p>Expert in creating complex mob behaviors and custom plugin configurations</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="bi bi-box-seam"></i>
+                            <h4>MMOItems</h4>
+                            <p>Advanced custom item creation and system integration</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="bi bi-people"></i>
+                            <h4>Community Management</h4>
+                            <p>Building and managing active gaming communities</p>
+                        </div>
+                        <div class="skill-item media-skill">
+                            <i class="bi bi-broadcast"></i>
+                            <h4>Media & Promotion</h4>
+                            <p>Creating engaging content and server promotion strategies. Expert in social media management, content creation, and community engagement. Specializing in gaming content, server showcases, and promotional campaigns.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="achievements">
+                    <h3>Achievements</h3>
+                    <ul>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="list-icon"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2l-3.21 6.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"/></svg>
+                            Founder of StellaStudio with 10 staff members specializing in areas such as coder, artist, optimizer, media, configer.
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="list-icon"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2l-3.21 6.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"/></svg>
+                            Founder of StellaStudio with over 1000 members, including over 200 customers on Discord and the website (stellamc.net). Over 70 customers have used services more than twice, and 20 customers use services regularly.
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="list-icon"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2l-3.21 6.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"/></svg>
+                            Products have been/are being used on large servers including setup files, configs, plugins,...
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="list-icon"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2l-3.21 6.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"/></svg>
+                            VSCode Extension currently has over 100 regular downloads and users through the marketplace and direct build from source.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Connect With Me</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                                <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+                            </svg>
+                        </div>
+                        <h3>Discord</h3>
+                        <a href="https://discord.gg/234W8Jr3bz" target="_blank" class="social-btn">
+                            <span>Join my Discord</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8l-9 9z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/>
+                            </svg>
+                        </div>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/SalyyS1" target="_blank" class="social-btn">
+                            <span>View my Projects</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8l-9 9z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 SalyVn. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/skinview3d@3.2.0/bundles/skinview3d.bundle.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
