@@ -2,11 +2,11 @@
     --primary: #00ffff;
     --primary-dark: #00cccc;
     --dark: #1a1a1a;
-    --darker: #0a0a15;
+    --darker: #0a0a15; /* Darker background for space */
     --light: #f5f5f5;
     --gray: #333333;
     --gray-light: #aaaaaa;
-    --gradient: linear-gradient(145deg, var(--darker), #05050a);
+    --gradient: linear-gradient(145deg, var(--darker), #05050a); /* Adjusted gradient */
     --card-shadow: 0 4px 15px rgba(0, 255, 255, 0.15);
     --hover-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
     --border-color: rgba(0, 255, 255, 0.15);
@@ -34,10 +34,12 @@ body {
     -ms-interpolation-mode: nearest-neighbor;
 }
 
+/* Remove starfield and shooting stars styles */
 #starfield, .shooting-stars {
     display: none;
 }
 
+/* Add overlay to ensure text readability */
 body::before {
     content: '';
     position: fixed;
@@ -50,6 +52,7 @@ body::before {
     pointer-events: none;
 }
 
+/* Add a container for the background */
 .background-container {
     position: fixed;
     top: 0;
@@ -169,7 +172,7 @@ code, pre {
 
 /* Sections */
 .section {
-    padding: 80px 0 60px;
+    padding: 80px 0 60px; /* Reduced padding between sections */
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -179,7 +182,7 @@ code, pre {
 
 .section-title {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 4rem; /* Adjusted margin */
     font-size: 3.5rem;
     color: var(--light);
     text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
@@ -234,7 +237,7 @@ code, pre {
     width: 100%;
     height: 480px;
     border-radius: 5px;
-    margin: 2.5rem 0;
+    margin: 6.5rem 0; /* Adjusted margin */
 }
 
 .skin-text-top {
@@ -319,6 +322,21 @@ code, pre {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.personal-info .avatar {
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    border-radius: 50%;
+    margin: 0 auto 2rem auto; /* Center the avatar and add margin below */
+    border: 4px solid var(--primary);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+    transition: all 0.4s ease;
+}
+
+.personal-info .avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
 }
 
 .info-header {
@@ -467,7 +485,7 @@ code, pre {
 
 .project-card img {
     width: 100%;
-    height: 250px;
+    height: 250px; /* Consistent height */
     object-fit: cover;
     transition: transform 0.5s ease;
     display: block;
@@ -721,6 +739,7 @@ code, pre {
     color: var(--primary);
 }
 
+/* Styles for Skill item paragraph */
 .skill-item p {
     color: var(--gray-light);
     font-size: 1rem;
@@ -852,6 +871,7 @@ code, pre {
     -webkit-backdrop-filter: blur(8px);
 }
 
+/* Style for the new section description */
 .section-description {
     text-align: center;
     margin-top: -2rem;
@@ -895,6 +915,7 @@ code, pre {
         grid-column: span 1;
     }
 
+     /* Projects grid two columns */
     .projects-grid {
          grid-template-columns: repeat(2, 1fr);
          max-width: 800px;
@@ -905,7 +926,7 @@ code, pre {
 }
 
 @media (max-width: 991px) {
-
+    /* Projects grid two columns - already handled in 1200px media query now */
 }
 
 @media (max-width: 768px) {
@@ -1098,7 +1119,7 @@ code, pre {
     }
 
     .minecraft-skin {
-         height: auto;
+         height: auto; /* Allow height to adjust */
     }
 
     #skin-canvas {
@@ -1148,4 +1169,25 @@ code, pre {
     .about-content {
         grid-template-columns: 1fr 1.5fr 1fr;
     }
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    color: var(--light);
+    line-height: 1.4;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.badges {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: rgba(16, 16, 26, 0.3);
+    color: var(--primary);
 }
