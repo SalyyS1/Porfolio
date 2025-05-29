@@ -2,11 +2,11 @@
     --primary: #00ffff;
     --primary-dark: #00cccc;
     --dark: #1a1a1a;
-    --darker: #0a0a15; /* Darker background for space */
+    --darker: #0a0a15; 
     --light: #f5f5f5;
     --gray: #333333;
     --gray-light: #aaaaaa;
-    --gradient: linear-gradient(145deg, var(--darker), #05050a); /* Adjusted gradient */
+    --gradient: linear-gradient(145deg, var(--darker), #05050a); 
     --card-shadow: 0 4px 15px rgba(0, 255, 255, 0.15);
     --hover-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
     --border-color: rgba(0, 255, 255, 0.15);
@@ -34,12 +34,8 @@ body {
     -ms-interpolation-mode: nearest-neighbor;
 }
 
-/* Remove starfield and shooting stars styles */
-#starfield, .shooting-stars {
-    display: none;
-}
 
-/* Add overlay to ensure text readability */
+
 body::before {
     content: '';
     position: fixed;
@@ -52,7 +48,7 @@ body::before {
     pointer-events: none;
 }
 
-/* Add a container for the background */
+
 .background-container {
     position: fixed;
     top: 0;
@@ -86,7 +82,7 @@ code, pre {
     padding: 0 20px;
 }
 
-/* Navigation */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -170,9 +166,9 @@ code, pre {
     display: none;
 }
 
-/* Sections */
+
 .section {
-    padding: 80px 0 60px; /* Reduced padding between sections */
+    padding: 80px 0 60px; 
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -182,7 +178,7 @@ code, pre {
 
 .section-title {
     text-align: center;
-    margin-bottom: 4rem; /* Adjusted margin */
+    margin-bottom: 4rem; 
     font-size: 3.5rem;
     color: var(--light);
     text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
@@ -201,7 +197,7 @@ code, pre {
     border-radius: 3px;
 }
 
-/* Hero Section */
+
 .hero {
     text-align: center;
     padding: 5rem 0;
@@ -237,7 +233,7 @@ code, pre {
     width: 100%;
     height: 480px;
     border-radius: 5px;
-    margin: 6.5rem 0; /* Adjusted margin */
+    margin: 6.5rem 0; 
 }
 
 .skin-text-top {
@@ -325,10 +321,10 @@ code, pre {
 }
 
 .personal-info .avatar {
-    width: 150px; /* Adjust size as needed */
-    height: 150px; /* Adjust size as needed */
+    width: 150px; 
+    height: 150px; 
     border-radius: 50%;
-    margin: 0 auto 2rem auto; /* Center the avatar and add margin below */
+    margin: 0 auto 2rem auto; 
     border: 4px solid var(--primary);
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
     transition: all 0.4s ease;
@@ -434,7 +430,7 @@ code, pre {
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
-/* Projects Section */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -485,7 +481,7 @@ code, pre {
 
 .project-card img {
     width: 100%;
-    height: 250px; /* Consistent height */
+    height: 250px; 
     object-fit: cover;
     transition: transform 0.5s ease;
     display: block;
@@ -629,7 +625,7 @@ code, pre {
     border: none;
 }
 
-/* About Section */
+
 .about-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -650,7 +646,7 @@ code, pre {
     padding: 0;
 }
 
-/* Styles for Experience and Achievement list items */
+
 .about-content ul li, .achievements ul li {
     background: rgba(16, 16, 26, 0.4);
     padding: 1.5rem 2rem;
@@ -739,7 +735,7 @@ code, pre {
     color: var(--primary);
 }
 
-/* Styles for Skill item paragraph */
+
 .skill-item p {
     color: var(--gray-light);
     font-size: 1rem;
@@ -758,7 +754,7 @@ code, pre {
     grid-column: span 2;
 }
 
-/* Contact Section */
+
 .contact-wrapper {
     display: flex;
     justify-content: center;
@@ -857,7 +853,7 @@ code, pre {
     transform: translateX(8px);
 }
 
-/* Footer */
+
 .footer {
     background: rgba(16, 16, 26, 0.3);
     padding: 2rem 0;
@@ -871,7 +867,7 @@ code, pre {
     -webkit-backdrop-filter: blur(8px);
 }
 
-/* Style for the new section description */
+
 .section-description {
     text-align: center;
     margin-top: -2rem;
@@ -881,7 +877,7 @@ code, pre {
     font-style: italic;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1200px) {
     .hero-content {
         grid-template-columns: 1fr;
@@ -915,7 +911,7 @@ code, pre {
         grid-column: span 1;
     }
 
-     /* Projects grid two columns */
+    
     .projects-grid {
          grid-template-columns: repeat(2, 1fr);
          max-width: 800px;
@@ -926,7 +922,7 @@ code, pre {
 }
 
 @media (max-width: 991px) {
-    /* Projects grid two columns - already handled in 1200px media query now */
+
 }
 
 @media (max-width: 768px) {
@@ -1119,7 +1115,7 @@ code, pre {
     }
 
     .minecraft-skin {
-         height: auto; /* Allow height to adjust */
+         height: auto; 
     }
 
     #skin-canvas {
